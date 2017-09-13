@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index.jsp
-    Created on : Sep 12, 2017, 8:29:31 PM
+    Document   : lab1response
+    Created on : Sep 12, 2017, 8:35:06 PM
     Author     : alexsmith
 --%>
 
@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello You!</h1>
-        <p>Click <a href="lab1.jsp">Here</a>to go to Lab 1!</p>
+        <h1>Here is the answer: ${rectArea} </h1>
     </body>
 </html>

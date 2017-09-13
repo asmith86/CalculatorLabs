@@ -14,7 +14,7 @@
     <body>
         <h1>Calculate Area of a rectangle:</h1>
 
-        <form name="greetForm" id="greetForm" method="POST" action="calcRectangle">
+        <form name="rectForm" id="rectForm" method="POST" action="lab1">
             Enter length: <input type="text" value="" name="rectLength">
             Enter width: <input type="text" value="" name="rectWidth">
             <br>

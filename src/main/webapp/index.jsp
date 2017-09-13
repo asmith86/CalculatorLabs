@@ -13,6 +13,8 @@
     </head>
     <body>
         <h1>Hello You!</h1>
-        <p>Click <a href="lab1.jsp">Here</a>to go to Lab 1!</p>
+        <p>Click <a href="lab1.jsp"> Here</a>to go to Lab 1!</p>
+        <p>Click <a href="lab2.jsp"> Here</a>to go to Lab 2!</p>
+        <p>Click <a href="lab3.jsp"> Here</a>to go to Lab 3!</p>
     </body>
 </html>

@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Here is the answer: ${rectArea} </h1>
+        <h1>Here is the area of your Rectangle: ${rectArea} </h1>
     </body>
 </html>

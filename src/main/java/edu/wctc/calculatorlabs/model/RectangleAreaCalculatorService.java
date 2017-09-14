@@ -9,7 +9,7 @@ package edu.wctc.calculatorlabs.model;
  *
  * @author alexsmith
  */
-public class RectangleAreaCalculator {
+public class RectangleAreaCalculatorService {
     
     public String calculateArea(String width, String height){
         double rectHeight = Double.parseDouble(height);

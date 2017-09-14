@@ -5,7 +5,7 @@
  */
 package edu.wctc.calculatorlabs.controller;
 
-import edu.wctc.calculatorlabs.model.RectangleAreaCalculator;
+import edu.wctc.calculatorlabs.model.RectangleAreaCalculatorService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -39,7 +39,7 @@ public class Lab1Controller extends HttpServlet {
         String output = "";
         
         try {
-            RectangleAreaCalculator rac = new RectangleAreaCalculator();
+            RectangleAreaCalculatorService rac = new RectangleAreaCalculatorService();
             output = rac.calculateArea(width, length);
             request.setAttribute("rectArea", output);
 

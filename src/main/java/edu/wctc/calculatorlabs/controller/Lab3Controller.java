@@ -5,7 +5,7 @@
  */
 package edu.wctc.calculatorlabs.controller;
 
-import edu.wctc.calculatorlabs.model.RectangleAreaCalculatorService;
+import edu.wctc.calculatorlabs.model.ShapeCalculatorService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -19,8 +19,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alexsmith
  */
-@WebServlet(name = "Lab2Controller", urlPatterns = {"/lab2"})
-public class Lab2Controller extends HttpServlet {
+@WebServlet(name = "Lab3Controller", urlPatterns = {"/lab3"})
+public class Lab3Controller extends HttpServlet {
+    private static final String CALC_MODE = "CalcMode";
+    private static final String TARGET_PAGE = "/lab3.jsp";
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,26 +37,32 @@ public class Lab2Controller extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String calcMode  = request.getParameter(CALC_MODE);
+        String answer = "";
         
-        String length = request.getParameter("rectLength");
-        String width = request.getParameter("rectWidth");
-        String output = "";
         
-        try {
-            RectangleAreaCalculatorService rac = new RectangleAreaCalculatorService();
-            output = rac.calculateArea(width, length);
-            request.setAttribute("rectArea", output);
-
-        } catch (Exception e) {
-            request.setAttribute("errMsg", e.getMessage());
+        ShapeCalculatorService scs = new ShapeCalculatorService();
+        if(calcMode.equals("rectangle")){
+            String length = request.getParameter("rectLength");
+            String width = request.getParameter("rectWidth");
+            answer = scs.calculateAreaOfRectangle(width, length);
+            request.setAttribute("rectArea", answer);
+           
+        } else if(calcMode.equals("circle")){
+            String radius = request.getParameter("radius");
+            answer = scs.calculateAreaOfCircle(radius);
+            request.setAttribute("circArea", answer);
+            
+        } else if(calcMode.equals("triangle")){
+            String height = request.getParameter("triHeight");
+            String width = request.getParameter("triWidth");
+            answer = scs.getHypotenuseOfTriangle(width, height);
+            request.setAttribute("hypotenuse", answer);
         }
         
-        
-
-        
-        
-        RequestDispatcher view = request.getRequestDispatcher("/lab2.jsp");
+        RequestDispatcher view = request.getRequestDispatcher(TARGET_PAGE);
         view.forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

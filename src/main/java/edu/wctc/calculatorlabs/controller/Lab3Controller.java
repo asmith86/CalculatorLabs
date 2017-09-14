@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Lab3Controller", urlPatterns = {"/lab3"})
 public class Lab3Controller extends HttpServlet {
-    private static final String CALC_MODE = "CalcMode";
+    private static final String CALC_MODE = "calcMode";
     private static final String TARGET_PAGE = "/lab3.jsp";
     
 

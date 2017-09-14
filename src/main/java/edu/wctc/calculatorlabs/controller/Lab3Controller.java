@@ -40,25 +40,32 @@ public class Lab3Controller extends HttpServlet {
         String calcMode  = request.getParameter(CALC_MODE);
         String answer = "";
         
-        
-        ShapeCalculatorService scs = new ShapeCalculatorService();
-        if(calcMode.equals("rectangle")){
-            String length = request.getParameter("rectLength");
-            String width = request.getParameter("rectWidth");
-            answer = scs.calculateAreaOfRectangle(width, length);
-            request.setAttribute("rectArea", answer);
-           
-        } else if(calcMode.equals("circle")){
-            String radius = request.getParameter("radius");
-            answer = scs.calculateAreaOfCircle(radius);
-            request.setAttribute("circArea", answer);
-            
-        } else if(calcMode.equals("triangle")){
-            String height = request.getParameter("triHeight");
-            String width = request.getParameter("triWidth");
-            answer = scs.getHypotenuseOfTriangle(width, height);
-            request.setAttribute("hypotenuse", answer);
+        try {
+            ShapeCalculatorService scs = new ShapeCalculatorService();
+            if (calcMode.equals("rectangle")) {
+                String length = request.getParameter("rectLength");
+                String width = request.getParameter("rectWidth");
+                answer = scs.calculateAreaOfRectangle(width, length);
+                request.setAttribute("rectArea", answer);
+
+            } else if (calcMode.equals("circle")) {
+                String radius = request.getParameter("radius");
+                answer = scs.calculateAreaOfCircle(radius);
+                request.setAttribute("circArea", answer);
+
+            } else if (calcMode.equals("triangle")) {
+                String height = request.getParameter("triHeight");
+                String width = request.getParameter("triWidth");
+                answer = scs.getHypotenuseOfTriangle(width, height);
+                request.setAttribute("hypotenuse", answer);
+            }
+
+        } catch (Exception e) {
+            request.setAttribute("errmsg", e.getMessage());
         }
+
+        
+       
         
         RequestDispatcher view = request.getRequestDispatcher(TARGET_PAGE);
         view.forward(request, response);

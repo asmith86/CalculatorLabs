@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Here is the area of your Rectangle: ${rectArea} </h1>
+        <p>Click <a href="index.jsp">Here</a> to go back.</p>
     </body>
 </html>

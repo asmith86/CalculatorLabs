@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lab 3</title>
     </head>
-    <body>
+    <body style="background-color:gainsboro">
         <h2>Lab 3</h2>
         <h2 style="color:green">Find the area of a rectangle</h2>
         <img src="http://spiff.rit.edu/classes/phys311/workshops/w1b/rectangle.gif" style="width:200px;height:100px">
@@ -43,5 +43,6 @@
             <input type="submit" name="submit" value="submit">
         </form>
         <p>Answer: ${hypotenuse}</p>
+        <p>Click <a href="index.jsp">Here</a> to go back home.</p>
     </body>
 </html>

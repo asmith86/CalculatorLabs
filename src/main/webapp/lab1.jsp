@@ -14,6 +14,9 @@
     <body>
         <h1>Calculate Area of a rectangle:</h1>
 
+        <img src="http://spiff.rit.edu/classes/phys311/workshops/w1b/rectangle.gif" style="width:200px;height:100px">
+
+
         <form name="rectForm" id="rectForm" method="POST" action="lab1">
             Enter length: <input type="text" value="" name="rectLength">
             <br>
@@ -22,8 +25,8 @@
             <input type="submit" name="submit" value="submit">
         </form>
 
-        
-        
+
+
         
     </body>
 </html>

@@ -13,7 +13,8 @@
     </head>
     <body>
         <h1>Lab 2: Calculate area of rectangle on one page!</h1>
-        
+        <img src="http://spiff.rit.edu/classes/phys311/workshops/w1b/rectangle.gif" style="width:200px;height:100px">
+
         <form name="rectForm" id="rectForm" method="POST" action="lab2">
             Enter length: <input type="text" value="" name="rectLength">
             <br>
@@ -21,7 +22,8 @@
             <br>
             <input type="submit" name="submit" value="submit">
         </form>
-        
+
         <h2>Area of rectangle: ${rectArea} </h2>
+        <p>Click <a href="index.jsp">Here</a> to go back home.</p>
     </body>
 </html>

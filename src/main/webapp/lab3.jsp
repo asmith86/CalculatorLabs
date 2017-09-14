@@ -13,7 +13,8 @@
     </head>
     <body>
         <h2>Lab 3</h2>
-        <p>Find the area of a rectangle</p>
+        <h2 style="color:green">Find the area of a rectangle</h2>
+        <img src="http://spiff.rit.edu/classes/phys311/workshops/w1b/rectangle.gif" style="width:200px;height:100px">
          <form name="rectForm" id="rectForm" method="POST" action="lab3?calcMode=rectangle">
             Enter length: <input type="text" value="" name="rectLength">
             <br>
@@ -23,7 +24,8 @@
         </form>
         <p>Answer: ${rectArea}</p>
         <br>
-        <p>Find the area of a circle</p>
+        <h2 style="color:red">Find the area of a circle</h2>
+        <img src="http://etc.usf.edu/clipart/42900/42943/circle-49_42943_sm.gif" style="width:200px;height:200px">
          <form name="circleForm" id="circleForm" method="POST" action="lab3?calcMode=circle">
             Enter radius: <input type="text" value="" name="radius">
             <br>
@@ -31,11 +33,12 @@
         </form>
         <p>Answer: ${circArea}</p>
         <br>
-        <p>Find the hypotenuse of a triangle</p>
+        <h2 style="color:blue">Find the hypotenuse of a triangle</h2>
+        <img src="https://qph.ec.quoracdn.net/main-qimg-8a9e3735630bffd9428e26cf505fda25" style="width:303px;height:190px">
          <form name="triangleForm" id="triangleForm" method="POST" action="lab3?calcMode=triangle">
-            Enter length: <input type="text" value="" name="triHeight">
+            Enter side A: <input type="text" value="" name="triHeight">
             <br>
-            Enter width: <input type="text" value="" name="triWidth">
+            Enter side B: <input type="text" value="" name="triWidth">
             <br>
             <input type="submit" name="submit" value="submit">
         </form>
